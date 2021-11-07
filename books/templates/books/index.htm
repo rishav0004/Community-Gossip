@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- "/books/{{i.id}}" -->
+<body>
+    {%for i in bdata%}
+    <a href="/books/{{i.id}}" target="_blank">
+         <div class="main" style="border-bottom: 1px solid whitesmoke;">
+        <h1 style="color: grey;">
+            {{i.title}}
+        </h1>
+        <img src= {{i.thumbnailUrl}}  >
+        <p>
+            {{i.authors}}
+        </p>
+        <p style="color: red; " >{{i.pageCount}}</p>
+    </div>
+    </a>
+   
+    {%endfor%}
+</body>
+</html>
